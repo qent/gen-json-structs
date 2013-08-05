@@ -189,7 +189,7 @@ func init() {
 func main() {
         scanner := bufio.NewScanner(os.Stdin)
         for scanner.Scan() {
-                jsonDecoder := json.NewDecoder(strings.NewReader(scanner.Text())) // Println will add back the final '\n'
+                jsonDecoder := json.NewDecoder(strings.NewReader(scanner.Text()))
                 var data interface{}
                 err := jsonDecoder.Decode(&data)
                 if err != nil {
